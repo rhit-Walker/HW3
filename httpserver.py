@@ -268,6 +268,7 @@ def main(testing_flags=None):
 
     currentGame = None
     bestScores = {}
+    bestScoresPage = createBestScores(bestScores)
 
     while flags["continue"]:
         # Wait for the browser to send a HTTP Request
@@ -341,9 +342,8 @@ def main(testing_flags=None):
 
                         # All lights may already be off.
                         if not any(currentGame["lights"]):
-                            responseBody = finishGame(
-                                currentGame, bestScores
-                            )
+                            responseBody = finishGame(currentGame, bestScores)
+                            bestScoresPage = responseBody
                             currentGame = None
                         else:
                             responseBody = createGamePage(currentGame)
@@ -357,9 +357,8 @@ def main(testing_flags=None):
                             toggleLight(currentGame, buttonIndex)
 
                             if not any(currentGame["lights"]):
-                                responseBody = finishGame(
-                                    currentGame, bestScores
-                                )
+                                responseBody = finishGame(currentGame, bestScores)
+                                bestScoresPage = responseBody
                                 currentGame = None
                             else:
                                 responseBody = createGamePage(currentGame)
@@ -377,7 +376,7 @@ def main(testing_flags=None):
                             responseBody = createGamePage(currentGame)
 
                     elif requestedFilename == "./public/best_scores.html":
-                        responseBody = createBestScores(bestScores)
+                        responseBody = bestScoresPage
 
                     elif requestedFilename in ("./public/startgame.html","./public/styles.css"):
                         responseBody = get_file_body_in_bytes(requestedFilename)
