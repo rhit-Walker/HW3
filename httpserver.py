@@ -70,7 +70,6 @@ def createBestScores(bestScores, message="", newBestSize=None):
 
         if numberOfLights == newBestSize:
             rows += '<tr class="new-best">'
-            player_name += " (NEW BEST)"
         else:
             rows += "<tr>"
 
