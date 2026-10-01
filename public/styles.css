@@ -1,0 +1,56 @@
+body {
+    background-color: lightblue;
+    color: black;
+    font-family: Arial, sans-serif;
+    margin: 25px;
+}
+
+input {
+    padding: 5px;
+}
+
+button {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.lights {
+    /* Source:https://stackoverflow.com/questions/572298/how-to-stop-text-from-taking-up-more-than-1-line */
+    white-space: nowrap;
+    /* Allows horizontal scrolling  */
+    /* Source: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scrollbars_styling */
+    overflow-x: auto;
+}
+
+.lights button {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    border: 2px solid rgb(0, 0, 0);
+    font-size: 24px;
+}
+
+.on {
+    background-color: yellow;
+    color: black;
+}
+
+.off {
+    background-color: black;
+    color: yellow;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+.new-best {
+    background-color: yellow;
+    font-weight: bold;
+}

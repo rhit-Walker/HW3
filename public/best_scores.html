@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Best Scores</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Best Scores</h1>
+
+    <p>{message}</p>
+    <!-- Source: https://www.w3schools.com/html/html_tables.asp -->
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Number of Lights</th>
+                <th scope="col">Lowest Number of Moves</th>
+                <th scope="col">Player Name</th>
+                <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {rows}
+        </tbody>
+    </table>
+
+    <p><a href="/startgame.html">Start a new game</a></p>
+    <p><a href="/game.html">Rejoin current game</a></p>
+</body>
+</html>

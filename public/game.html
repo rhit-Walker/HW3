@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Linear Lights Out</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Make the buttons all turn to Xs.</h1>
+
+    <p>Player: {player_name}</p>
+    <p>Moves: {moves}</p>
+
+    <form action="/toggle_light" method="post" class="lights">
+        {buttons}
+    </form>
+
+    <p><a href="/startgame.html">Start a new game</a></p>
+    <p><a href="/best_scores.html">View best scores</a></p>
+</body>
+</html>
